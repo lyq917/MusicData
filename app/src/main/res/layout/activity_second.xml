@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scenery"
+    tools:context=".SecondActivity">
+
+    <RelativeLayout
+        android:id="@+id/settings_top"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#E66A60">
+        <ImageButton
+            android:id="@+id/settings_back"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/settings_back" />
+
+        <TextView
+            android:id="@+id/SettingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Settings"
+            android:textSize="25dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_top">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent">
+
+
+
+            <View
+                style="@style/WireThinHorizontal"/>
+            <View
+                style="@style/WireThinHorizontal"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:padding="@dimen/spacing_normal">
+
+                <TextView
+                    style="@style/StuInfoType"
+                    android:text="播放模式"
+                    />
+
+                <TextView
+                    android:id="@+id/play_mode"
+                    style="@style/MyInfoDetail"
+                    android:text="顺序播放"
+                    />
+                <ImageButton
+                    android:id="@+id/play_mode_icon"
+                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+
+                    android:background="@drawable/playmode1"
+                    />
+
+            </TableRow>
+
+            <View
+                style="@style/WireThinHorizontal"/>
+
+            <View
+                style="@style/WireThinHorizontal"/>
+
+
+            <View
+                style="@style/WireThinHorizontal"/>
+
+
+
+            <View
+                style="@style/WireThinHorizontal"/>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
